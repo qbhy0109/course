@@ -5,8 +5,8 @@ import java.util.Random;
 public class MiningAlgorithm {
 	public static void main(String[] args) throws Exception{
 		long time = 0;
-		int d=3;
-		//for(;d<6;++d) {
+		int d=1;
+		for(;d<6;++d) {
 			System.out.println("d = "+d);
 			for(int i=0;i<3;++i) {
 				boolean flag = false;
@@ -19,7 +19,7 @@ public class MiningAlgorithm {
 				time += time2-time1;
 			}
 			System.out.println("average time: "+time/3+"ms");
-		//}
+		}
 	}
 	
 	public static String[] getHashCode() throws Exception{
