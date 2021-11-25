@@ -8,8 +8,9 @@ for i=1:100
     FreqRange=linspace(-200*pi/i,200*pi/i,N);    % display frequency range
     Half_Tau=Tau/2;                              % -0.5 Tao ==> 0.5 Tao
     RECT=1/Tau*double(abs(TimeRange)<Half_Tau);  % one rectangular pulse
-    SINC=sinc(FreqRange*Tau*pi);                 % sinc pulse, Xtra
-    
+%     SINC=sinc(FreqRange*Tau*pi);                 % sinc pulse, Xtra
+    SINC=sin(FreqRange*Tau*pi)/(FreqRange*Tau*pi);
+
     subplot(2,1,1);
     plot(TimeRange,RECT,'LineWidth',1.5); grid on;
     xlim([-1 1]); ylim([-0.5 120]);
